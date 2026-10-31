@@ -1,33 +1,31 @@
-/* Astounded.net
-   Aims for WCAG 2.2 AAA. Criterion numbers are noted where a rule exists because of one.
-   Sizes are relative so browser font settings and zoom always work (1.4.4, 1.4.10). */
-
 html {
   font-family: system-ui, sans-serif;
-  line-height: 1.5; /* 1.4.8: at least 1.5 within paragraphs */
+  line-height: 1.5;
   color: #000;
   background: #fff;
 }
 
 body {
-  max-width: 70ch; /* 1.4.8: lines no wider than 80 characters */
+  max-width: 70ch;
   margin: 0 auto;
   padding: 0 1rem;
-  text-align: start; /* 1.4.8: never justified */
+  text-align: start;
 }
 
-/* 1.4.8: space between blocks at least 1.5 × the line spacing */
-p, ul, ol, dl, table {
+p,
+ul,
+ol,
+dl {
   margin-block: 0 2.25em;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   line-height: 1.25;
   margin-block: 1.5em 0.75em;
 }
 
-/* Links: always underlined, not just colored (1.4.1).
-   #0000EE is 9.4:1 and #551A8B is 11.0:1 on white (1.4.6). */
 a {
   color: #0000ee;
   text-decoration: underline;
@@ -42,13 +40,11 @@ a:hover {
   text-decoration-thickness: 0.15em;
 }
 
-/* 2.4.13: thick, high-contrast focus indicator */
 :focus-visible {
   outline: 3px solid #000;
   outline-offset: 2px;
 }
 
-/* 2.5.5: links that aren't inside a sentence are at least 44 × 44 px */
 .skip,
 header a,
 nav a,
@@ -61,7 +57,6 @@ footer a,
   min-width: 44px;
 }
 
-/* Skip link: hidden until it gets keyboard focus */
 .skip {
   position: absolute;
   left: -100vw;
@@ -71,7 +66,6 @@ footer a,
   position: static;
 }
 
-/* Header and footer sit in the normal page flow, never sticky (2.4.12) */
 header {
   border-bottom: 2px solid #000;
 }
@@ -93,7 +87,6 @@ footer ul,
   list-style: none;
 }
 
-/* 2.4.8: show where you are */
 nav a[aria-current] {
   font-weight: bold;
 }
@@ -105,7 +98,7 @@ nav a[aria-current] {
 
 .breadcrumb li + li::before {
   content: "/";
-  content: "/" / ""; /* hidden from screen readers where supported */
+  content: "/" / "";
   margin-inline-end: 0.5em;
 }
 
@@ -127,23 +120,19 @@ footer {
   border-top: 2px solid #000;
 }
 
-/* Data tables: let wide tables scroll on their own rather than the page (1.4.10).
-   Wrap in <div class="table-wrap" role="region" aria-labelledby="…" tabindex="0">. */
-.table-wrap {
-  overflow-x: auto;
+figure {
+  border: 1px solid black;
+  margin: 0;
+  padding: 1em;
 }
 
-table {
-  border-collapse: collapse;
+figcaption {
+  color: #555;
+  padding-top: 1em;
 }
 
-caption {
-  font-weight: bold;
-  padding-block-end: 0.5em;
-}
-
-th, td {
-  border: 1px solid #000;
-  padding: 0.5em;
-  vertical-align: top;
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
 }
